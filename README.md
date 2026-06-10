@@ -8,7 +8,7 @@ Automated **TLS/SSL security auditing toolkit** built around `openssl s_client`,
 
 ---
 
-## ✨ Features
+## Features
 
 - **Protocol auditing** — confirms that only **TLS 1.2 / TLS 1.3** are allowed and that legacy
   protocols (SSLv3, TLS 1.0, TLS 1.1) are rejected.
@@ -24,23 +24,21 @@ Automated **TLS/SSL security auditing toolkit** built around `openssl s_client`,
 
 ---
 
-## 📂 Repository structure
+## Repository structure
 
 ```
 .
 ├── tls-checker.sh            # Main TLS auditing tool (POSIX sh)
 ├── v3_ca.ext                 # X.509v3 extensions for intermediate CAs
 ├── v3_leaf.ext               # X.509v3 extensions for the leaf cert (incl. SAN)
-├── generate_report.py        # Generates the final .docx report (python-docx)
 ├── *_cert.pem                # Public certificates (safe to publish)
 ├── *.csr                     # Certificate signing requests
 ├── nginx-bonus/
 │   ├── nginx.conf            # Intentionally vulnerable Nginx config
 │   └── docker-compose.yml    # Orchestration for the vulnerable lab
-└── Cybersecurity_Project3_Final.docx
 ```
 
-> ⚠️ **Private keys are intentionally NOT included** in this repository (see `.gitignore`).
+> **Private keys are intentionally NOT included** in this repository (see `.gitignore`).
 > They can be regenerated locally with the OpenSSL commands below.
 
 ---
@@ -122,7 +120,7 @@ docker run --rm -ti drwetter/testssl.sh <hostname>
 
 ---
 
-## 🔐 Algorithm choices & security levels
+## Algorithm choices & security levels
 
 | Algorithm   | Key / Curve      | Security level | Role in chain      |
 |-------------|------------------|----------------|--------------------|
@@ -136,7 +134,7 @@ fully met by RSA-15360, ECDSA P-521 and Dilithium5.
 
 ---
 
-## ⚠️ Disclaimer
+## Disclaimer
 
 This project is intended **strictly for educational purposes**. The vulnerable Nginx configuration
 and weak-cipher tests must never be used in production environments. All certificates here are
@@ -144,6 +142,6 @@ self-signed for lab use only.
 
 ---
 
-## 📄 License
+##  License
 
 Released under the MIT License — free to use for educational purposes.
