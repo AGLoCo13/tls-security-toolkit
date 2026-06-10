@@ -1,0 +1,33 @@
+# =============================================================================
+#  .gitignore - TLS Security Toolkit
+#  ΚΡΙΣΙΜΟ: Κανένα ιδιωτικό κλειδί (private key) δεν πρέπει να ανέβει στο repo.
+# =============================================================================
+
+# --- Ιδιωτικά κλειδιά (ΠΟΤΕ σε public repo) ---
+*_key.pem
+*_private.key
+*.key
+ecparam.pem
+
+# --- Nginx SSL ιδιωτικά κλειδιά ---
+nginx-bonus/ssl/*.key
+
+# --- OpenSSL serial / προσωρινά αρχεία ---
+*.srl
+s_client_output.txt
+temp_cert.pem
+
+# --- Microsoft Office προσωρινά / lock files ---
+~$*.docx
+~$*.doc
+~$*.xlsx
+
+# --- Λειτουργικό σύστημα ---
+.DS_Store
+Thumbs.db
+
+# --- Python ---
+__pycache__/
+*.pyc
+.venv/
+venv/
